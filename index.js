@@ -59,22 +59,29 @@ console.log(languages);
 ]
 */
 
+//QUESTION 3
 let fruit = ["apple", "mango", "banana"];
 function changeFruit(fruit) {
-    fruit[2] = "orange";
-    return fruit;
+  fruit[2] = "orange";
+  return fruit;
 }
 console.log(changeFruit(fruit)); // [ 'apple', 'mango', 'orange' ]
 
 // QUESTION 4
+function maxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}
 
-
+let numArray = [4, 5, 10, -2];
+let maxValue = maxOfArray(numArray);
+console.log("Maximum value is " + maxValue)
+// Maximum value is 10
 
 // QUESTION 5
 function valTimesIndex(arrayOfNum) {
-    return arrayOfNum.map(function (value, index) {
-        return value * index;
-    });
+  return arrayOfNum.map(function (value, index) {
+    return value * index;
+  });
 }
 
 let arrayOfNum = [5, 10, 15];
